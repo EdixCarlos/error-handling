@@ -1,0 +1,46 @@
+plugins {
+	id 'java-library'
+	id 'org.springframework.boot' version '3.3.1' apply(false)
+	id 'io.spring.dependency-management' version '1.1.5'
+}
+
+group = 'org.aje'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencyManagement {
+	imports {
+		mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+	}
+}
+
+dependencies {
+	api 'org.springframework.boot:spring-boot-starter-web'
+	api 'org.springframework.boot:spring-boot-starter-security'
+	api 'org.springframework.boot:spring-boot-starter-validation'
+	api 'org.springframework.boot:spring-boot-starter-data-jpa'
+	api 'org.springframework.boot:spring-boot-starter-web-services'
+	compileOnly('org.projectlombok:lombok')
+	annotationProcessor('org.projectlombok:lombok')
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
