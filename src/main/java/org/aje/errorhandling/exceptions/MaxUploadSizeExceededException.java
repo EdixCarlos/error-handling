@@ -16,4 +16,9 @@ public class MaxUploadSizeExceededException extends CustomException {
     public String getErrorDescription() {
         return "The uploaded file size exceeds the maximum allowed limit.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

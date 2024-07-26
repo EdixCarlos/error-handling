@@ -16,4 +16,9 @@ public class WebServiceIOException extends CustomException {
     public String getErrorDescription() {
         return "I/O error occurred while communicating with a web service.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

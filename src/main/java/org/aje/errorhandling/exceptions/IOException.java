@@ -16,4 +16,9 @@ public class IOException extends CustomException {
     public String getErrorDescription() {
         return "An I/O error has occurred.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

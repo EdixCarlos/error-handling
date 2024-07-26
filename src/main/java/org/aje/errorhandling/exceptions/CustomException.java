@@ -9,4 +9,7 @@ public abstract class CustomException extends RuntimeException {
 
     public abstract HttpStatus getHttpStatus();
     public abstract String getErrorDescription();
+
+    public abstract String getErrorDescription(String message);
+
 }

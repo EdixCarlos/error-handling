@@ -16,4 +16,9 @@ public class ConnectException extends CustomException {
     public String getErrorDescription() {
         return "Failed to connect to the server.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

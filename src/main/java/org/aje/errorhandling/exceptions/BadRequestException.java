@@ -16,4 +16,9 @@ public class BadRequestException extends CustomException {
     public String getErrorDescription() {
         return "The request could not be understood by the server due to malformed syntax.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

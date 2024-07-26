@@ -16,4 +16,9 @@ public class HttpServerErrorException extends CustomException {
     public String getErrorDescription() {
         return "The server encountered an unexpected condition which prevented it from fulfilling the request.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

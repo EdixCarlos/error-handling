@@ -16,4 +16,9 @@ public class SocketTimeoutException extends CustomException {
     public String getErrorDescription() {
         return "The socket timed out while trying to read or write data.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

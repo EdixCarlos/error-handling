@@ -16,4 +16,9 @@ public class IllegalArgumentException extends CustomException {
     public String getErrorDescription() {
         return "Illegal argument provided.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

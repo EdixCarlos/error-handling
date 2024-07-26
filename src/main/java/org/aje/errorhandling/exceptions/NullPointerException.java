@@ -16,4 +16,9 @@ public class NullPointerException extends CustomException {
     public String getErrorDescription() {
         return "Null pointer accessed.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

@@ -16,4 +16,9 @@ public class SoapFaultClientException extends CustomException {
     public String getErrorDescription() {
         return "A SOAP fault occurred during the communication with the service.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

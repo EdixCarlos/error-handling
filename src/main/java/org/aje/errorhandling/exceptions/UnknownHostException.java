@@ -16,4 +16,9 @@ public class UnknownHostException extends CustomException {
     public String getErrorDescription() {
         return "The IP address of the host could not be determined.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

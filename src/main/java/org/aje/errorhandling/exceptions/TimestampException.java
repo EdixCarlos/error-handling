@@ -2,19 +2,19 @@ package org.aje.errorhandling.exceptions;
 
 import org.springframework.http.HttpStatus;
 
-public class OptimisticLockingFailureException extends CustomException {
-    public OptimisticLockingFailureException(String message) {
+public class TimestampException extends CustomException {
+    public TimestampException(String message) {
         super(message);
     }
 
     @Override
     public HttpStatus getHttpStatus() {
-        return HttpStatus.CONFLICT;
+        return HttpStatus.REQUEST_TIMEOUT;
     }
 
     @Override
     public String getErrorDescription() {
-        return "A conflict occurred due to optimistic locking failure.";
+        return "Error related to timestamp processing.";
     }
 
     @Override

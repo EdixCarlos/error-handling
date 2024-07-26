@@ -16,4 +16,8 @@ public class HttpMediaTypeNotSupportedException extends CustomException {
     public String getErrorDescription() {
         return "The media type is not supported.";
     }
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

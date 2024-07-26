@@ -16,4 +16,9 @@ public class ConstraintViolationException extends CustomException {
     public String getErrorDescription() {
         return "A constraint violation occurred.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

@@ -16,4 +16,9 @@ public class SQLException extends CustomException {
     public String getErrorDescription() {
         return "A SQL error has occurred.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

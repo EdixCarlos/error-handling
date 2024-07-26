@@ -3,8 +3,10 @@ package org.aje.errorhandling.exceptions;
 import org.springframework.http.HttpStatus;
 
 public class TemplateException extends CustomException {
+    private final String message;
     public TemplateException(String message) {
         super(message);
+        this.message = message;
     }
 
     @Override
@@ -14,6 +16,10 @@ public class TemplateException extends CustomException {
 
     @Override
     public String getErrorDescription() {
-        return "Description of the specific error.";
+        return this.message;
+    }
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
     }
 }

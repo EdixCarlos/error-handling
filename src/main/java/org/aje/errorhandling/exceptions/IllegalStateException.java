@@ -16,4 +16,9 @@ public class IllegalStateException extends CustomException {
     public String getErrorDescription() {
         return "The application is in an illegal state.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

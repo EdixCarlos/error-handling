@@ -16,4 +16,9 @@ public class RestClientException extends CustomException {
     public String getErrorDescription() {
         return "Error occurred during REST client operation.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

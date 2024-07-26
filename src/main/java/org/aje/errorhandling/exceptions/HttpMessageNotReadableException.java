@@ -16,4 +16,8 @@ public class HttpMessageNotReadableException extends CustomException {
     public String getErrorDescription() {
         return "HTTP message is not readable.";
     }
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

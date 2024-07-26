@@ -16,4 +16,8 @@ public class DataConflictException extends CustomException {
     public String getErrorDescription() {
         return "There is a conflict with the existing data.";
     }
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

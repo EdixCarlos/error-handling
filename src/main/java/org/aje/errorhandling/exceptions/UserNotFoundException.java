@@ -16,4 +16,9 @@ public class UserNotFoundException extends CustomException {
     public String getErrorDescription() {
         return "The requested user does not exist.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

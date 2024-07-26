@@ -16,4 +16,8 @@ public class HttpRequestMethodNotSupportedException extends CustomException {
     public String getErrorDescription() {
         return "The HTTP request method is not supported.";
     }
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

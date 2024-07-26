@@ -5,5 +5,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("org.aje.errorhandling")
-public class AutoConfig {
+public class ErrorHandlingAutoConfig {
 }

@@ -16,4 +16,9 @@ public class HttpTimeoutException extends CustomException {
     public String getErrorDescription() {
         return "The HTTP request timed out.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

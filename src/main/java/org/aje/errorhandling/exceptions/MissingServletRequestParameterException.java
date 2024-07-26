@@ -16,4 +16,9 @@ public class MissingServletRequestParameterException extends CustomException {
     public String getErrorDescription() {
         return "Required parameter is missing in the request.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

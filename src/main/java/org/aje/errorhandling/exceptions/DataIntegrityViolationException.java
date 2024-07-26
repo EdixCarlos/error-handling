@@ -16,4 +16,8 @@ public class DataIntegrityViolationException extends CustomException {
     public String getErrorDescription() {
         return "Data integrity violation has occurred.";
     }
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

@@ -16,4 +16,9 @@ public class TypeMismatchException extends CustomException {
     public String getErrorDescription() {
         return "The type of the provided value did not match the expected type.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

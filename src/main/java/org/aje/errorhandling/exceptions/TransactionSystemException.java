@@ -16,4 +16,9 @@ public class TransactionSystemException extends CustomException {
     public String getErrorDescription() {
         return "A system error occurred while processing the transaction.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }

@@ -16,4 +16,9 @@ public class AccessDeniedException extends CustomException {
     public String getErrorDescription() {
         return "Access is denied.";
     }
+
+    @Override
+    public String getErrorDescription(String message) {
+        return message;
+    }
 }
